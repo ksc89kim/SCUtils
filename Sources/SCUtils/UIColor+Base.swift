@@ -7,6 +7,8 @@
 
 #if canImport(UIKit)
 
+import UIKit
+
 public extension UIColor {
 
   struct RGBA {
