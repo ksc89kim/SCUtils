@@ -5,6 +5,8 @@
 //  Created by kim sunchul on 2022/05/26.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 public extension String {
@@ -35,3 +37,5 @@ public extension String {
   }
   
 }
+
+#endif

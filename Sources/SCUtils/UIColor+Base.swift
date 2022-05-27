@@ -5,7 +5,7 @@
 //  Created by kim sunchul on 2022/05/26.
 //
 
-import UIKit
+#if canImport(UIKit)
 
 public extension UIColor {
 
@@ -36,7 +36,6 @@ public extension UIColor {
       blue: rgb & 0xFF
     )
   }
-
 
   func toRGBAComponents() -> RGBA {
     var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
@@ -81,6 +80,7 @@ public extension UIColor {
       alpha: CGFloat(1.0)
     )
   }
-  
 
 }
+
+#endif
