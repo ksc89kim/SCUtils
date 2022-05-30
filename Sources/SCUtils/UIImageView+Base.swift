@@ -12,7 +12,7 @@ import UIKit
 public extension UIImageView {
 
   func cropImage() {
-    let frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
+    let frame: CGRect = .init(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
 
     let imageView: UIImageView = UIImageView(frame: frame)
     imageView.backgroundColor = UIColor.clear
@@ -23,10 +23,10 @@ public extension UIImageView {
 
     UIGraphicsBeginImageContext(frame.size)
     imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-    let roundedImage = UIGraphicsGetImageFromCurrentImageContext()
+    let cropImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
 
-    self.image = roundedImage
+    self.image = cropImage
   }
 
 }

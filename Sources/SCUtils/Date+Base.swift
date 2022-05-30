@@ -16,7 +16,7 @@ public extension Date {
     dateFormatter.locale = locale
 
     guard let date = dateFormatter.date(from: string) else {
-      self = Date()
+      self = .init()
       return
     }
     self = date

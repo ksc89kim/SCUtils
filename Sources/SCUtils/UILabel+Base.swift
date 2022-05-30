@@ -15,12 +15,12 @@ public extension UILabel {
   }
 
   func maxLines(width: CGFloat) -> Int {
-    guard let font = self.font else { return 0 }
+    guard let font: UIFont = self.font else { return 0 }
 
     let maxSize: CGSize = .init(width: width, height: CGFloat(Float.infinity))
-    let charSize = self.font.lineHeight
-    let text = (self.text ?? "") as NSString
-    let textSize = text.boundingRect(
+    let charSize: CGFloat = self.font.lineHeight
+    let text: NSString = (self.text ?? "") as NSString
+    let textSize: CGRect = text.boundingRect(
       with: maxSize,
       options: .usesLineFragmentOrigin,
       attributes: [NSAttributedString.Key.font: font],
