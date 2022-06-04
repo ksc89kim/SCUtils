@@ -9,6 +9,10 @@ import Foundation
 
 public extension Collection {
 
+  var isNotEmpty: Bool {
+    return !self.isEmpty
+  }
+
   subscript(safe index: Index) -> Element? {
     return self.indices.contains(index) ? self[index] : nil
   }
@@ -24,5 +28,5 @@ public extension Collection {
     }
     return slices
   }
-  
+
 }
